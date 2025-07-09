@@ -102,8 +102,6 @@ app.get('/p/:id', (req, res) => {
   const data = db[req.params.id];
   if (!data) return res.status(404).send('ページが見つかりません');
 
-  if (!(data.redirect="")) return res.redirect(data.redirect);
-
   const status = data.k ? '管理中' : '管理していません';
   const sContent = data.s
     ? `<p><a href="${data.s}" target="_blank">リンク</a></p>`
@@ -121,6 +119,7 @@ if (!(data.redirect)) {
     <p>From: ${data.from}</p>
     <p>状態: ${status}（${refLink}）</p>
     ${sContent}
+    
     <hr/>
     <table border="1">
       <tr><th>プロパティ</th><th>意味</th><th>内容</th></tr>
