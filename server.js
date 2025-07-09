@@ -102,7 +102,7 @@ app.get('/p/:id', (req, res) => {
   const data = db[req.params.id];
   if (!data) return res.status(404).send('ページが見つかりません');
 
-  if (data.redirect) return res.redirect(data.redirect);
+  if (!(!(data.redirect))) return res.redirect(data.redirect);
 
   const status = data.k ? '管理中' : '管理していません';
   const sContent = data.s
