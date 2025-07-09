@@ -1,0 +1,16 @@
+{
+  "name": "sorrywebhost",
+  "version": "1.0.0",
+  "description": "Glitch Webホスト終了後の代替アプリケーション",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["express", "nodejs", "webhost", "glitch"],
+  "author": "あなたの名前",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2"
+  }
+}
