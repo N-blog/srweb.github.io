@@ -109,9 +109,6 @@ app.get('/p/:id', (req, res) => {
   const refLink = data.ref
     ? `<a href="${data.ref}" target="_blank">${data.ref}</a>`
     : 'なし';
-if (!(data.redirect)) {
-    res.redirect("/redirect/"+data.redirect)
-}
   res.send(`
     <title>WebHosts ${data.title}</title>
     <h1>${data.title} (${refLink})の情報 Webhost</h1>
